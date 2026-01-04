@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Code2, Zap, Database } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 interface ServicesSectionProps {
   onChatClick?: (service: string) => void;
@@ -145,7 +144,7 @@ export default function ServicesSection({ onChatClick }: ServicesSectionProps) {
                   </p>
 
                   {/* Skills */}
-                  <div className="mb-6">
+                  <div>
                     <p className="text-xs uppercase tracking-widest text-slate-400 mb-2">
                       Skills
                     </p>
@@ -160,16 +159,6 @@ export default function ServicesSection({ onChatClick }: ServicesSectionProps) {
                       ))}
                     </div>
                   </div>
-
-                  {/* CTA Button */}
-                  <Button
-                    onClick={() => onChatClick?.(service.title)}
-                    variant="outline"
-                    size="sm"
-                    className="w-full border-purple-500/50 text-purple-400 hover:bg-purple-500/10 hover:border-purple-400 transition-all"
-                  >
-                    Ask AI about this
-                  </Button>
                 </div>
 
                 {/* Border glow on hover */}
