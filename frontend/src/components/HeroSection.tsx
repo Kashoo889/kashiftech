@@ -125,23 +125,29 @@ export default function HeroSection({ onChatClick }: HeroSectionProps) {
           {/* CTA Button */}
           <motion.div
             variants={itemVariants}
-            className="flex justify-center items-center"
+            className="flex flex-col justify-center items-center gap-3"
           >
             <Button
               asChild
               size="lg"
-              className="bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-700 hover:to-purple-600 text-white border-0 px-8 py-6 text-lg font-semibold group"
+              className="bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-700 hover:to-purple-600 text-white border-0 px-8 py-6 text-lg font-semibold"
             >
               <a
                 href="https://wa.me/923376496322?text=Hello, I'm interested in hiring you for a project."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2"
+                className="flex items-center justify-center"
               >
-                <span>Hire Me</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                Hire Me
               </a>
             </Button>
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="text-purple-400/70"
+            >
+              <ArrowRight className="w-6 h-6 rotate-90" />
+            </motion.div>
           </motion.div>
 
           {/* Scroll Indicator */}
