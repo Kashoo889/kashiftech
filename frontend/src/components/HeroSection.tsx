@@ -128,11 +128,19 @@ export default function HeroSection({ onChatClick }: HeroSectionProps) {
             className="flex justify-center items-center"
           >
             <Button
+              asChild
               size="lg"
               className="bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-700 hover:to-purple-600 text-white border-0 px-8 py-6 text-lg font-semibold group"
             >
-              Hire Me
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              <a
+                href="https://wa.me/923376496322?text=Hello, I'm interested in hiring you for a project."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center"
+              >
+                Hire Me
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
           </motion.div>
 
