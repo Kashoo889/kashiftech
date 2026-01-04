@@ -1,0 +1,204 @@
+{
+  "name": "Muhammad Kashif",
+  "title": "Frontend & Full-Stack Developer",
+  "bio": "Passionate full-stack developer with expertise in WordPress, React, and MERN stack. I create modern, responsive web applications with clean code and user-centric design.",
+  "services": [
+    {
+      "id": "wordpress",
+      "name": "WordPress Development",
+      "experience": "3+ years",
+      "description": "Custom WordPress themes and plugins using Bricks Builder and Elementor. I specialize in creating high-performance, SEO-optimized websites tailored to your business needs.",
+      "skills": ["PHP", "WordPress", "Bricks Builder", "Elementor", "WooCommerce"]
+    },
+    {
+      "id": "react",
+      "name": "React Development",
+      "experience": "1+ year",
+      "description": "Modern frontend development with React and Next.js. I build responsive, interactive user interfaces with Tailwind CSS and component-driven architecture.",
+      "skills": ["React", "Next.js", "Tailwind CSS", "TypeScript", "Framer Motion"]
+    },
+    {
+      "id": "mern",
+      "name": "MERN Stack Development",
+      "experience": "1+ year",
+      "description": "Full-stack applications using MongoDB, Express, React, and Node.js. I develop scalable backends and beautiful frontends that work seamlessly together.",
+      "skills": ["MongoDB", "Express", "React", "Node.js", "REST APIs"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "nettsidedesign-no",
+      "title": "Nettside Design - Web Design Agency",
+      "tech": ["WordPress", "PHP", "Custom Theme"],
+      "description": "Professional web design agency website with multilingual support (Norwegian/English). Developed 10+ pages with custom functionality and responsive design.",
+      "link": "https://nettsidedesign.no/"
+    },
+    {
+      "id": "nettsidedesign-en",
+      "title": "Nettside Design - English Version",
+      "tech": ["WordPress", "PHP", "Multilingual"],
+      "description": "English version of the web design agency website. Developed 10+ pages with seamless language switching and custom features.",
+      "link": "https://nettsidedesign.no/en/"
+    },
+    {
+      "id": "kognitivterapeut",
+      "title": "Kognitiv Terapeut - Therapy Services",
+      "tech": ["WordPress", "PHP", "Custom Theme"],
+      "description": "Professional therapy services website. Developed 4+ pages with booking system and service information.",
+      "link": "https://kognitivterapeut.no/"
+    },
+    {
+      "id": "dataanalyticsstack",
+      "title": "Data Analytics Stack",
+      "tech": ["WordPress", "PHP", "Custom Development"],
+      "description": "Data analytics services website. Developed 4 pages with modern design and analytics-focused content.",
+      "link": "https://sysinn.net/dataanalyticsstack.com/"
+    },
+    {
+      "id": "friendsnetwork",
+      "title": "Friends Network",
+      "tech": ["WordPress", "PHP", "Custom Theme"],
+      "description": "Social networking platform built with WordPress. Features user profiles, connections, and community features.",
+      "link": "https://friendsnetwork.pk/"
+    },
+    {
+      "id": "mufaddalsafety",
+      "title": "Mufaddal Safety Equipments",
+      "tech": ["WordPress", "WooCommerce", "PHP"],
+      "description": "Safety equipment e-commerce website with product catalog, shopping cart, and secure checkout system.",
+      "link": "https://mufaddalsafetyequipments.com/"
+    },
+    {
+      "id": "yourhealthservices",
+      "title": "Your Health Services",
+      "tech": ["WordPress", "PHP", "Custom Theme"],
+      "description": "Healthcare services website with appointment booking, service information, and patient resources.",
+      "link": "https://yourhealthservices.ca"
+    },
+    {
+      "id": "faizanhayat",
+      "title": "Faizan Hayat - Personal Portfolio",
+      "tech": ["WordPress", "PHP", "Custom Theme"],
+      "description": "Personal portfolio website showcasing professional work, skills, and achievements with modern design.",
+      "link": "https://faizanhayat.com/"
+    },
+    {
+      "id": "cardis",
+      "title": "Cardis - Business Services",
+      "tech": ["WordPress", "PHP", "Custom Theme"],
+      "description": "Business services website with service listings, contact forms, and company information.",
+      "link": "https://cardis.ca/"
+    },
+    {
+      "id": "keycapitalproperties",
+      "title": "Key Capital Properties",
+      "tech": ["WordPress", "PHP", "Real Estate Theme"],
+      "description": "Real estate property website with property listings, search functionality, and property details.",
+      "link": "https://keycapitalproperties.com/"
+    },
+    {
+      "id": "entreye",
+      "title": "EntrEye - Business Platform",
+      "tech": ["WordPress", "PHP", "Custom Development"],
+      "description": "Business platform website with modern design, service information, and contact features.",
+      "link": "https://entreye.co/"
+    },
+    {
+      "id": "theluckyroaster",
+      "title": "The Lucky Roaster",
+      "tech": ["WordPress", "WooCommerce", "PHP"],
+      "description": "Coffee roaster e-commerce website with product catalog, online ordering, and coffee subscription features.",
+      "link": "https://theluckyroaster.com.au/"
+    },
+    {
+      "id": "betterpridehomecare",
+      "title": "Better Pride Home Care",
+      "tech": ["WordPress", "PHP", "Healthcare Theme"],
+      "description": "Home care services website with service information, caregiver profiles, and booking system.",
+      "link": "https://betterpridehomecaree.com.au/"
+    },
+    {
+      "id": "gphr-store",
+      "title": "GPHR Store",
+      "tech": ["WordPress", "WooCommerce", "PHP"],
+      "description": "E-commerce store with product catalog, shopping cart, payment integration, and order management.",
+      "link": "https://gphr.store/"
+    },
+    {
+      "id": "cowan",
+      "title": "Cowan - Business Services",
+      "tech": ["WordPress", "PHP", "Custom Theme"],
+      "description": "Professional business services website with service offerings, company information, and contact features.",
+      "link": "https://cowan.com/"
+    },
+    {
+      "id": "australiaacutonics",
+      "title": "Australia Acutonics",
+      "tech": ["WordPress", "PHP", "Custom Theme"],
+      "description": "Alternative therapy services website with treatment information, practitioner profiles, and booking system.",
+      "link": "https://australiaacutonics.com/"
+    },
+    {
+      "id": "pphs-pk",
+      "title": "PPHS - Paras Public High School",
+      "tech": ["WordPress", "PHP", "Custom Theme"],
+      "description": "School website for Paras Public High School. Features school information, academic programs, student resources, and administrative features.",
+      "link": "https://pphs.pk/"
+    },
+    {
+      "id": "onlyif",
+      "title": "OnlyIf - Real Estate Platform",
+      "tech": ["MERN", "MongoDB", "Express", "React", "Node.js"],
+      "description": "Real estate platform where sellers can list homes at their desired price. Features property browsing, seller dashboard, and buyer-seller connections.",
+      "link": "https://onlyif.com.au/"
+    },
+    {
+      "id": "studymentorhub",
+      "title": "StudyMentorHub - Finance Dashboard",
+      "tech": ["MERN", "MongoDB", "Express", "React", "Node.js"],
+      "description": "Financial management dashboard for tracking finances, managing accounts, and monitoring financial activities. Features secure login, financial analytics, and comprehensive financial tools.",
+      "link": "https://www.studymentorhub.shop/"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Full-Stack Developer",
+      "duration": "1+ year",
+      "description": "Building complete web applications from backend to frontend"
+    },
+    {
+      "role": "React Developer",
+      "duration": "1+ year",
+      "description": "Creating modern, responsive user interfaces with React and Next.js"
+    },
+    {
+      "role": "WordPress Developer",
+      "duration": "3+ years",
+      "description": "Developing custom WordPress sites with advanced customization"
+    }
+  ],
+  "contact": {
+    "email": "mkashifshah10@gmail.com",
+    "whatsapp": "+92 3376496322",
+    "github": "https://github.com/MuhammadKashif10",
+    "linkedin": "https://www.linkedin.com/in/muhammad-kashif-867223229/"
+  },
+  "faqs": [
+    {
+      "question": "What services do you offer?",
+      "answer": "I offer WordPress development, React frontend development, and full-stack MERN applications. Each service is tailored to your specific needs."
+    },
+    {
+      "question": "How long does a project typically take?",
+      "answer": "Project timelines vary based on complexity. Simple websites take 2-4 weeks, while full-stack applications may take 2-3 months. I'll provide a detailed timeline after discussing your requirements."
+    },
+    {
+      "question": "Do you work on existing projects?",
+      "answer": "Yes! I can help improve, maintain, or extend existing websites and applications. Contact me to discuss your project needs."
+    },
+    {
+      "question": "What's your development process?",
+      "answer": "I follow a collaborative approach: requirement gathering, design mockups, development with regular updates, testing, and deployment. You'll be involved at every stage."
+    }
+  ]
+}
