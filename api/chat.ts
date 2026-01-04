@@ -57,7 +57,7 @@ export default async function handler(
 
   try {
     // Call Groq API
-    const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+    const groqResponse = await fetch('https://api.groq.com/openai/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${apiKey}`,
@@ -80,20 +80,32 @@ export default async function handler(
       }),
     });
 
-    if (!response.ok) {
-      const errorData = await response.text();
-      console.error('Groq API error:', response.status, errorData);
-      return res.status(response.status).json({ 
-        error: 'Failed to get AI response. Please try again.' 
+    if (!groqResponse.ok) {
+      const errorData = await groqResponse.text();
+      console.error('Groq API error:', groqResponse.status, errorData);
+      
+      // Provide more specific error messages
+      let errorMessage = 'Failed to get AI response. Please try again.';
+      if (groqResponse.status === 401) {
+        errorMessage = 'Invalid API key. Please check your GROQ_API_KEY in Vercel settings.';
+      } else if (groqResponse.status === 429) {
+        errorMessage = 'Rate limit exceeded. Please try again in a moment.';
+      } else if (groqResponse.status >= 500) {
+        errorMessage = 'Groq API is temporarily unavailable. Please try again later.';
+      }
+      
+      return res.status(groqResponse.status).json({ 
+        error: errorMessage 
       });
     }
 
-    const data = await response.json();
+    const data = await groqResponse.json();
 
     // Extract the AI response
     const aiMessage = data.choices?.[0]?.message?.content;
 
     if (!aiMessage) {
+      console.error('Invalid Groq response structure:', JSON.stringify(data));
       return res.status(500).json({ 
         error: 'Invalid response from AI service.' 
       });
@@ -106,8 +118,9 @@ export default async function handler(
 
   } catch (error) {
     console.error('Error calling Groq API:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
     return res.status(500).json({ 
-      error: 'An error occurred while processing your request. Please try again.' 
+      error: `An error occurred: ${errorMessage}. Please try again.` 
     });
   }
 }
