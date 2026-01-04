@@ -59,11 +59,25 @@ export default function Chatbot() {
         body: JSON.stringify({ message: messageToSend }),
       });
 
-      if (!response.ok) {
-        throw new Error("Failed to get response");
-      }
-
       const data = await response.json();
+
+      if (!response.ok) {
+        // Handle API errors
+        const errorText = data.error || "Failed to get response";
+        console.error("API Error:", errorText, "Status:", response.status);
+        
+        const errorMessage: Message = {
+          id: (Date.now() + 1).toString(),
+          text: errorText.includes("configuration") 
+            ? "The chatbot is currently being configured. Please try again later."
+            : "I'm sorry, I'm having trouble processing that. Please try again in a moment.",
+          sender: "bot",
+          timestamp: new Date(),
+        };
+        
+        setMessages((prev) => [...prev, errorMessage]);
+        return;
+      }
 
       // Add bot response
       const botMessage: Message = {
@@ -77,10 +91,12 @@ export default function Chatbot() {
     } catch (error) {
       console.error("Error calling chat API:", error);
       
-      // Add error message
+      // Check if it's a network error
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: "I'm sorry, I'm having trouble connecting right now. Please try again in a moment.",
+        text: error instanceof TypeError && error.message.includes("fetch")
+          ? "I'm sorry, I'm having trouble connecting to the server. Please check your connection and try again."
+          : "I'm sorry, an unexpected error occurred. Please try again in a moment.",
         sender: "bot",
         timestamp: new Date(),
       };

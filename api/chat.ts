@@ -15,6 +15,20 @@ export default async function handler(
   req: VercelRequest,
   res: VercelResponse
 ) {
+  // Enable CORS
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  );
+
+  // Handle preflight requests
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
   // Only allow POST requests
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -31,11 +45,15 @@ export default async function handler(
   const apiKey = process.env.GROQ_API_KEY;
 
   if (!apiKey) {
-    console.error('GROQ_API_KEY is not set');
+    console.error('GROQ_API_KEY is not set in environment variables');
+    console.error('Available env vars:', Object.keys(process.env).filter(k => k.includes('GROQ')));
     return res.status(500).json({ 
-      error: 'Server configuration error. Please contact the administrator.' 
+      error: 'Server configuration error: GROQ_API_KEY environment variable is not set. Please configure it in Vercel project settings.' 
     });
   }
+
+  // Log that API key is present (but don't log the actual key)
+  console.log('GROQ_API_KEY is configured (length:', apiKey.length, 'characters)');
 
   try {
     // Call Groq API
