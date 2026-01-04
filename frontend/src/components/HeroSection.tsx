@@ -136,10 +136,10 @@ export default function HeroSection({ onChatClick }: HeroSectionProps) {
                 href="https://wa.me/923376496322?text=Hello, I'm interested in hiring you for a project."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center"
+                className="flex items-center justify-center gap-2"
               >
-                Hire Me
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                <span>Hire Me</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
           </motion.div>
